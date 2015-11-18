@@ -7,8 +7,8 @@ PROC Power
   push ax ; Remember AX
   push cx ; Remember CX
   
-  mov cx, ss:[si+2] ; power
-  mov ax, ss:[si+3] ; number
+  mov cx, ss:[si+8] ; power
+  mov ax, ss:[si+6] ; number
   multiplyAX: ; Multiplies AX
     mul ax, ax
   loop multiplyAX
@@ -23,8 +23,8 @@ PROC EPower ; Efficient implementation
   push ax ; Remember AX
   push cx ; Remember CX
   
-  mov ax, ss:[si+3] ; Get parameter number 
-  mov cx, ss:[si+2] ; Get parameter power
+  mov ax, ss:[si+8] ; Get parameter number 
+  mov cx, ss:[si+6] ; Get parameter power
   
   div cx, 2 ; Divide power to 2
   push ax ; Set parameter number to EPower
