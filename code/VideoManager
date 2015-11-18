@@ -1,0 +1,4 @@
+PROC SetVideoMode
+
+ENDP SetVideoMode
+
