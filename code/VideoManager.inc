@@ -1,5 +1,3 @@
-```
-
 PROC SetTextMode
 
 push ax ; Remember current AX
@@ -24,5 +22,3 @@ int 10h ; Interrupt DOS
 pop ax ; Retrieve original AX
 ret
 ENDP
-
-```
