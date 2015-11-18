@@ -1,4 +1,4 @@
-PROC SetTextMode
+PROC SetTextMode ; Set the grpahics mode to text mode
 
 push ax ; Remember current AX
 
@@ -7,11 +7,11 @@ mov al, 02h ; Set video mode parameter to text mode
 int 10h ; Interrupt DOS
 
 pop ax ; Retrieve original AX
-ret ; Return to previous code
+ret
 
 ENDP SetTextMode
 
-PROC SetVideoMode
+PROC SetVideoMode ; Set the graphics mode to video mode
 
 push ax ; Remember current AX
 
@@ -21,4 +21,4 @@ int 10h ; Interrupt DOS
 
 pop ax ; Retrieve original AX
 ret
-ENDP
+ENDP SetVideoMode
